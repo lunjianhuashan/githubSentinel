@@ -1,0 +1,22 @@
+{
+  "github": {
+    "api_token": "123",
+    "repos": [
+      "lunJianHuaShan/learn",
+      "lunJianHuaShan/githubSentinel"
+    ]
+  },
+  "schedule": {
+    "frequency": "daily",
+    "time": "09:00"
+  },
+  "notifications": {
+    "email": {
+      "enabled": true,
+      "smtp_server": "smtp.163.com",
+      "smtp_port": 465,  
+      "from": "a497233306@163.com",
+      "to": "1946025298@qq.com"
+    }
+  }
+}
