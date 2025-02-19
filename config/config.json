@@ -2,8 +2,7 @@
   "github": {
     "api_token": "123",
     "repos": [
-      "lunJianHuaShan/learn",
-      "lunJianHuaShan/githubSentinel"
+      "langchain-ai/langchain"
     ]
   },
   "schedule": {

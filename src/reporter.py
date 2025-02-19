@@ -1,9 +1,12 @@
+from github_client import GitHubClient
+
 class Reporter:
-    def generate_report(self, updates):
-        report = "GitHub Repository Updates\n\n"
-        for repo_updates in updates:
-            for commit in repo_updates:
-                report += f"Commit: {commit['commit']['message']}\n"
-                report += f"Author: {commit['commit']['author']['name']}\n"
-                report += f"Date: {commit['commit']['author']['date']}\n\n"
-        return report
+    def __init__(self, github_client):
+        self.github_client = github_client
+    
+    def generate_report(self, repo):
+        release_info = self.github_client.get_latest_release(repo)
+        if release_info:
+            return f"Latest release version for {repo}: {release_info['tag_name']}, Released at: {release_info['published_at']}"
+        else:
+            return "Could not retrieve release info."
