@@ -1,6 +1,6 @@
 {
   "github": {
-    "api_token": "123",
+    "api_token": "124",
     "repos": [
       "langchain-ai/langchain"
     ]
@@ -14,7 +14,7 @@
       "enabled": true,
       "smtp_server": "smtp.163.com",
       "smtp_port": 465,  
-      "from": "a497233306@163.com",
+      "password": "BBZhKj2Ggx3UgJA5",  
       "to": "1946025298@qq.com"
     }
   }

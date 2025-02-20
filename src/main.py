@@ -1,9 +1,20 @@
 from github_client import GitHubClient
 from reporter import Reporter
-from config import config
+import json
 import time
 
-def main():
+def main(): 
+ # 读取 config.json 配置
+    try:
+        with open('config/config.json') as f:
+            config = json.load(f)
+    except FileNotFoundError:
+        print("Error: config.json file not found.")
+        return
+    except json.JSONDecodeError:
+        print("Error: Invalid JSON format in config.json.")
+        return
+
     github_client = GitHubClient(config['github']['api_token'])
     reporter = Reporter(github_client)
 
